@@ -10,6 +10,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -25,16 +26,27 @@ public class DataProviderClass extends CatUtilityClass {
 		{
 			ChromeOpen();
 		}
+		else if(x.equalsIgnoreCase("FireFox"))
+		{
+			Firefox();
+		}
 	}
 	
-	@BeforeMethod()
-	public void BeforeMethod() throws InterruptedException 
+	@BeforeClass()
+	public void BeforeClass() throws InterruptedException 
 	{
 		//login
 		Openbrowser();
 		Thread.sleep(1500);
    
 	}
+	@BeforeMethod
+	public void Beforemethod()
+	{
+		System.out.println("BeforeMethod");
+	}
+	
+	
 	@Test(dataProvider="testdata")
 	public void Testdata (String Username ,String  passward) throws InterruptedException, IOException
 	{
@@ -45,9 +57,20 @@ public class DataProviderClass extends CatUtilityClass {
 			Thread.sleep(2000);
 			obj.Login1();
 			Thread.sleep(2000);
-			Screenshot(driver);
+		//	Screenshot(driver);
 			Thread.sleep(2000);
-				
+			
+			String actual="Facebook";
+			String Title = driver.getTitle();
+			if(actual.equals(Title))
+			{
+				System.out.println(" varification is successfully done on data ProviderClass");
+			}
+			else
+			{
+				System.out.println("Varification is failed on data Provider Class");
+			}
+				Thread.sleep(1000);
 		
 	}
 	
@@ -90,9 +113,10 @@ public class DataProviderClass extends CatUtilityClass {
 	@AfterClass
 	public void AfterClass()
 	{
-		System.out.println("Afterclass");
+		
 		obj=null;
 		obj3=null;
+		System.out.println("Afterclass");
 		
 	}
 	@AfterTest

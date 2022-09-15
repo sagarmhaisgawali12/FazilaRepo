@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite123" class="navigator-link">
-              <span class="suite-name border-skipped">Suite123</span>
+              <span class="suite-name border-failed">Suite123</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite123" class="navigator-link ">
-                    <span>C:\Users\DELL\eclipse-workspace\org.CAT\testng.xml</span>
+                    <span>C:\Users\DELL\git\repository2\org.CAT\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  1 skipped,  1 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite123" class="hide-methods skipped suite-Suite123"> (hide)</a> <!-- hide-methods skipped suite-Suite123 -->
-                      <a href="#" panel-name="suite-Suite123" class="show-methods skipped suite-Suite123"> (show)</a> <!-- show-methods skipped suite-Suite123 -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite123" class="hide-methods failed suite-Suite123"> (hide)</a> <!-- hide-methods failed suite-Suite123 -->
+                      <a href="#" panel-name="suite-Suite123" class="show-methods failed suite-Suite123"> (show)</a> <!-- show-methods failed suite-Suite123 -->
                     </span>
-                    <div class="method-list-content skipped suite-Suite123">
+                    <div class="method-list-content failed suite-Suite123">
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite123" title="org.CAT.CATtest" class="method navigator-link" hash-for-method="facebookLogo">facebookLogo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Suite123 -->
+                    </div> <!-- method-list-content failed suite-Suite123 -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -133,9 +133,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite123" class="panel Suite123">
-          <div class="suite-Suite123-class-skipped">
+          <div class="suite-Suite123-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">org.CAT.CATtest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -144,15 +144,15 @@
                   <a name="facebookLogo">
                   </a> <!-- facebookLogo -->
                   <span class="method-name">facebookLogo</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@class=&apos;q9uorilb l9j0dhe7 pzggbiyp du4w35lb&apos;])[1]&quot;}
-  (Session info: chrome=104.0.5112.101)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[contains(@class,&apos;ehxjyohh kr520xx4 &apos;)])[1]&quot;}
+  (Session info: chrome=105.0.5195.102)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.1.3&apos;, revision: &apos;7b1ebf28ef&apos;
-System info: host: &apos;DESKTOP-7QK8N4O&apos;, ip: &apos;192.168.1.37&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3.1&apos;
+System info: host: &apos;DESKTOP-7QK8N4O&apos;, ip: &apos;192.168.1.35&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [193091ac23f08aa7ef06a0f6c4243876, findElement {using=xpath, value=(//div[@class=&apos;q9uorilb l9j0dhe7 pzggbiyp du4w35lb&apos;])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.101, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61955}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61955/devtoo..., se:cdpVersion: 104.0.5112.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 193091ac23f08aa7ef06a0f6c4243876
+Command: [7d98a8441aaa5ca24e740a4f7043640c, findElement {using=xpath, value=(//div[contains(@class,&apos;ehxjyohh kr520xx4 &apos;)])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52240}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52240/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d98a8441aaa5ca24e740a4f7043640c
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -166,16 +166,16 @@ Session ID: 193091ac23f08aa7ef06a0f6c4243876
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
-	at org.CATPOM.LogoutCATpomclass.logAction1(LogoutCATpomclass.java:15)
-	at org.CAT.CATtest.afterMEthod(CATtest.java:96)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.isDisplayed(Unknown Source)
+	at org.CATPOM.LogoutCATpomclass.isDisplayed(LogoutCATpomclass.java:32)
+	at org.CAT.CATtest.facebookLogo(CATtest.java:84)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 37 stack frames
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite123-class-skipped -->
+          </div> <!-- suite-Suite123-class-failed -->
           <div class="suite-Suite123-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -194,7 +194,7 @@ Session ID: 193091ac23f08aa7ef06a0f6c4243876
         </div> <!-- panel Suite123 -->
         <div panel-name="test-xml-Suite123" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\DELL\eclipse-workspace\org.CAT\testng.xml</span>
+            <span class="header-content">C:\Users\DELL\git\repository2\org.CAT\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -246,18 +246,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Varification')
+data.setCell(0, 1, 'facebookLogo')
 data.setCell(0, 2, 'org.CAT.CATtest')
-data.setCell(0, 3, 4462);
+data.setCell(0, 3, 3357);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'facebookLogo')
+data.setCell(1, 1, 'Varification')
 data.setCell(1, 2, 'org.CAT.CATtest')
-data.setCell(1, 3, 0);
+data.setCell(1, 3, 3197);
 window.suiteTableData['Suite123']= { tableData: data, tableDiv: 'times-div-Suite123'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Suite123">
               </div> <!-- times-div-Suite123 -->
             </div> <!-- times-div -->
@@ -290,41 +290,41 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">OpenBrowser</span>
-                <span class="method-start">6256 ms</span>
+                <span class="method-start">6383 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">BeforeMethod</span>
-                <span class="method-start">11509 ms</span>
+                <span class="method-start">11681 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Varification</span>
-                <span class="method-start">19755 ms</span>
+                <span class="method-start">20019 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">afterMEthod([TestResult name=Varification status=SUCCESS method=CATtest.Varification()[pri:1, instance:org.CAT.C...)</span>
-                <span class="method-start">24223 ms</span>
+                <span class="method-start">23223 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">BeforeMethod</span>
-                <span class="method-start">24526 ms</span>
+                <span class="method-start">29642 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">facebookLogo</span>
-                <span class="method-start">24531 ms</span>
+                <span class="method-start">36291 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMEthod</span>
-                <span class="method-start">24561 ms</span>
+                <span class="method-name">afterMEthod([TestResult name=facebookLogo status=FAILURE method=CATtest.facebookLogo()[pri:2, instance:org.CAT.C...)</span>
+                <span class="method-start">39659 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">AfterClass</span>
-                <span class="method-start">24573 ms</span>
+                <span class="method-start">45821 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">AfterTest</span>
-                <span class="method-start">24583 ms</span>
+                <span class="method-start">45822 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

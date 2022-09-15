@@ -61,11 +61,20 @@ public class CATtest extends CatUtilityClass {
 	public void Varification() throws IOException, InterruptedException
 	{
 		//varification
+		String actual="Facebook";
 		String Title = driver.getTitle();
-		System.out.println(Title);
+		if(actual.equals(Title))
+		{
+			System.out.println(" varification is successfully done");
+		}
+		else
+		{
+			System.out.println("Varification is failed");
+		}
+	//	System.out.println(Title);
 		
 		//Thread.sleep(2000);
-		Screenshot(driver);
+	//Screenshot(driver);
 		
 		
 	}
@@ -82,11 +91,11 @@ public class CATtest extends CatUtilityClass {
 	}
 	*/
 	@AfterMethod
-	public void afterMEthod(ITestResult result) throws InterruptedException
+	public void afterMEthod(ITestResult result) throws InterruptedException, IOException
 	{
 		if(ITestResult.FAILURE==result.getStatus())
 		{
-			Screenshot2(driver,result.getName());
+			Screenshot(driver);
 		}
 		
 		

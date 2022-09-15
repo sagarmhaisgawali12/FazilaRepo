@@ -26,6 +26,7 @@ public class CatUtilityClass extends CatBaseClass {
 		FileUtils.copyFile(Source,Dest);
 		
 	}
+	
 	public void Screenshot2(WebDriver driver ,String Failed)
 	{
 		try 
@@ -47,7 +48,7 @@ public class CatUtilityClass extends CatBaseClass {
 	{
 		String path="C:\\Users\\DELL\\Documents\\ExcelParameterization.xlsx";
 		FileInputStream file=new FileInputStream(path);
-		String data=WorkbookFactory.create(file).getSheet("Sheet2").getRow(row).getCell(col).getStringCellValue();
+		String data=WorkbookFactory.create(file).getSheet("Sheet1").getRow(row).getCell(col).getStringCellValue();
 		return data;
 		
 	}
